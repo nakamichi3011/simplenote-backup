@@ -32,6 +32,7 @@ def job():
 	try:
 	    subprocess.call(DOWNLOAD_SCRIPTS)
 	    isSuccessDownload = True
+	    os.remove("dump")
 	    print("Success download.")
 	except:
 	    print("Failure download.")
