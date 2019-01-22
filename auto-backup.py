@@ -59,7 +59,7 @@ def job():
 
 			for i in range(0, len(files) - MAX_FILE_COUNT):
 				os.remove(files[i])
-		print("Since 100 backups exceeded, the oldest ZIP was deleted.")
+			print("Since 100 backups exceeded, the oldest ZIP was deleted.")
 
 	# End processing time
 	now = datetime.datetime.now()
