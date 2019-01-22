@@ -64,6 +64,10 @@ def job():
 	# End processing time
 	now = datetime.datetime.now()
 	print("[End] " + now.strftime("%Y/%m/%d %H:%M:%S"))
+	
+	print("")
+	print("Wait for next time... : " + RUN_TIME)
+	print("")
 
 # Entry point
 if __name__=='__main__':
