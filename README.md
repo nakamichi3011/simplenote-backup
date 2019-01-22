@@ -14,6 +14,11 @@ simplenote-backup
     
     tags: foo, bar
 
+## !! Customized, Auto back up and zip !!
+
+* Load [Token] and [backup dir] and [save count] from in config.txt
+* Compress and save the backup file
+* You can set the number of backup files
 
 ## Why
 
