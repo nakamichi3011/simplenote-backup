@@ -16,7 +16,7 @@ simplenote-backup
 
 ## !! Customized, Auto back up and zip !!
 
-* Load [Token] and [backup dir] and [save count] from in config.txt
+* Load [Token] and [backup dir] and [save count] from in config.ini
 * Compress and save the backup file
 * You can set the number of backup files
 
