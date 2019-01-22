@@ -15,6 +15,7 @@ DOWNLOAD_SCRIPTS = 'python ./simplenote-backup.py'.split()
 BACKUP_FILE_DIR = inifile.get('settings', 'backupdir')
 BACKUP_FILES_DIR = 'simplenote-backup-files/'
 MAX_FILE_COUNT = inifile.get('settings', 'savecount')
+RUN_TIME = inifile.get('settings', 'run_time')
 
 # download and zip
 def job():
@@ -69,8 +70,8 @@ if __name__=='__main__':
 	# Test job
 	job()
 
-	# Run the job at AM05:00
-	schedule.every().day.at("05:00").do(job)
+	# Run the job at {HH:MM}
+	schedule.every().day.at(RUN_TIME).do(job)
 
 	# Wait for run
 	while True:
