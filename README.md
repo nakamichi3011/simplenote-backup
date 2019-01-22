@@ -19,6 +19,7 @@ simplenote-backup
 * Load [Token] and [backup dir] and [save count] from in config.ini
 * Compress and save the backup file
 * You can set the number of backup files
+* Can be executed at any time
 
 ## Why
 
