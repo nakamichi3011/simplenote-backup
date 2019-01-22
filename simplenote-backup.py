@@ -1,9 +1,13 @@
 import os, sys, json
 from simperium.core import Api as SimperiumApi
+import ConfigParser
+
+inifile = ConfigParser.SafeConfigParser()
+inifile.read('./config.ini')
 
 appname = 'chalk-bump-f49' # Simplenote
-token = os.environ['TOKEN']
-backup_dir = sys.argv[1] if len(sys.argv) > 1 else (os.path.join(os.environ['HOME'], "Dropbox/SimplenoteBackups"))
+token = inifile.get('settings', 'token') # my token
+backup_dir = inifile.get('settings', 'backupdir') # save dir
 print "Starting backup your simplenote to: %s" % backup_dir
 if not os.path.exists(backup_dir):
     print "Creating directory: %s" % backup_dir
